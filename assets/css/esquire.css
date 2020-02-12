@@ -2344,8 +2344,9 @@ a,
 }
 
 .small-text {
-  color: #e78b90;
+  color: #9494b8;
   text-align: center;
+  opacity: .8;
 }
 
 .social-buttons {
@@ -2468,7 +2469,7 @@ a,
   height: 100vh;
   z-index: 2;
   position: absolute;
-  display: block;
+  display: none;
 }
 
 .section-gallery,
