@@ -21,7 +21,7 @@ var burger_menu;
 var scroll_distance = 500;
 
 
-$('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
+$('body').append('<div style="" id="loadingDiv"><div class="loader"></div></div>');
 $(window).on('load', function(){
   setTimeout(removeLoader, 1000); //wait for page load PLUS two seconds.
 });
