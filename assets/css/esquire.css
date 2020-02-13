@@ -4027,7 +4027,7 @@ fieldset {
       top: calc(50vh - 75px);
       left: calc(50vw - 75px);
      
-      background: url(../img/loader.gif)
+      background: url(../img/loading.svg)
   }
   
   #loadingDiv {
