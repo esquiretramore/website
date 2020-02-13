@@ -4042,3 +4042,7 @@ fieldset {
   .hidden {
     display: none;
   }
+
+  .no-padding ul {
+    padding: 0;
+  }
