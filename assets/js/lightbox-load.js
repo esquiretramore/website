@@ -1,7 +1,10 @@
+// This value controls number of images displayed in gallery
+var imgNo = 40
+
 $(document).ready(function () {
     var bCheckEnabled = true;
     var bFinishCheck = false;
-    var num = 58; // number of images
+    var num = imgNo + 1;
     var img;
     var i = 2;
 
