@@ -4,7 +4,7 @@ function initMap() {
   var myOptions = {
     zoom: 14,
     scrollwheel: false,
-    center: new google.maps.LatLng(52.1615977, -7.1501521),
+    center: new google.maps.LatLng(52.161583, -7.154476),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     styles: [
       {
