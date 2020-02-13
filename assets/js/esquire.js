@@ -327,8 +327,14 @@ $(document).ready(function () {
 
 $('.scroll').click(function(){
     event.preventDefault();
+    removeHash();
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top - 95
     }, 1000);
    
 });
+
+function removeHash () { 
+    history.pushState("", document.title, window.location.pathname
+                                                       + window.location.search);
+}
