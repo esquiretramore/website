@@ -4026,7 +4026,6 @@ fieldset {
       position: fixed;
       top: calc(50vh - 75px);
       left: calc(50vw - 75px);
-     
       background: url(../img/loading.svg)
   }
   
@@ -4038,4 +4037,8 @@ fieldset {
       height:100%;
       z-index: 9999;
       background-color:#000;
+  }
+
+  .hidden {
+    display: none;
   }

@@ -21,20 +21,36 @@ var burger_menu;
 var scroll_distance = 500;
 
 
-$('body').append('<div style="" id="loadingDiv"><div class="loader"></div></div>');
-$(window).on('load', function(){
-  setTimeout(removeLoader, 1000); //wait for page load PLUS two seconds.
-});
-function removeLoader(){
-    $( "#loadingDiv" ).fadeOut(500, function() {
-      // fadeOut complete. Remove the loading div
-      $( "#loadingDiv" ).remove(); //makes page more lightweight 
-  });  
-}
+$('body').append('<div style="" id="loadingDiv"><div class="loader hidden"></div></div>');
+
 
 $(document).ready(function () {
     BrowserDetect.init();
 
+    if (BrowserDetect.browser == 'Chrome') {
+        $(".loader" ).removeClass("hidden");
+        $(window).on('load', function(){
+            setTimeout(removeLoader, 1000); //wait for page load PLUS two seconds.
+          });
+          function removeLoader(){
+              $( "#loadingDiv" ).fadeOut(500, function() {
+                // fadeOut complete. Remove the loading div
+                $( "#loadingDiv" ).remove(); //makes page more lightweight 
+            });  
+          }
+    }
+    else {
+        $(window).on('load', function(){
+            setTimeout(removeLoader, 0); //wait for page load PLUS 0 seconds.
+          });
+          function removeLoader(){
+              $( "#loadingDiv" ).fadeOut(500, function() {
+                // fadeOut complete. Remove the loading div
+                $( "#loadingDiv" ).remove(); //makes page more lightweight 
+            });  
+          }
+
+    }
     if (BrowserDetect.browser == 'Explorer' && BrowserDetect.version <= 9) {
         $('body').html(better_browser);
     }
