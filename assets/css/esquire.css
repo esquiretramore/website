@@ -4018,16 +4018,16 @@ fieldset {
   .loader,
   .loader:after {
       border-radius: 50%;
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
   }
   .loader {            
       font-size: 10px;
       position: fixed;
-      top: calc(50vh - 100px);
-      left: calc(50vw - 100px);
+      top: calc(50vh - 75px);
+      left: calc(50vw - 75px);
      
-      background: url(../img/loading.svg)
+      background: url(../img/loader.gif)
   }
   
   #loadingDiv {
