@@ -209,6 +209,10 @@ a:hover {
   color: #c5a47e;
 }
 
+.line-separator .icon {
+  color: #FFFFFF!important;
+}
+
 .quotes {
   position: relative;
   margin: 0 auto;
