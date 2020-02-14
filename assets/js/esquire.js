@@ -28,27 +28,27 @@ $(document).ready(function () {
     BrowserDetect.init();
 
     if (BrowserDetect.browser == 'Chrome') {
-        $(".loader" ).removeClass("hidden");
-        $(window).on('load', function(){
+        $(".loader").removeClass("hidden");
+        $(window).on('load', function () {
             setTimeout(removeLoader, 1000); //wait for page load PLUS two seconds.
-          });
-          function removeLoader(){
-              $( "#loadingDiv" ).fadeOut(500, function() {
+        });
+        function removeLoader() {
+            $("#loadingDiv").fadeOut(500, function () {
                 // fadeOut complete. Remove the loading div
-                $( "#loadingDiv" ).remove(); //makes page more lightweight 
-            });  
-          }
+                $("#loadingDiv").remove(); //makes page more lightweight 
+            });
+        }
     }
     else {
-        $(window).on('load', function(){
+        $(window).on('load', function () {
             setTimeout(removeLoader, 0); //wait for page load PLUS 0 seconds.
-          });
-          function removeLoader(){
-              $( "#loadingDiv" ).fadeOut(500, function() {
+        });
+        function removeLoader() {
+            $("#loadingDiv").fadeOut(500, function () {
                 // fadeOut complete. Remove the loading div
-                $( "#loadingDiv" ).remove(); //makes page more lightweight 
-            });  
-          }
+                $("#loadingDiv").remove(); //makes page more lightweight 
+            });
+        }
 
     }
     if (BrowserDetect.browser == 'Explorer' && BrowserDetect.version <= 9) {
@@ -66,8 +66,8 @@ $(document).ready(function () {
     }
 
     // Init navigation toggle for small screens
-    if (window_width < 992 || burger_menu) {
-        gaia.initRightMenu();
+    if (window_width < 1000 || burger_menu) {
+        esquire.initRightMenu();
     }
 
     if ($('.content-with-opacity').length != 0) {
@@ -81,35 +81,37 @@ $(document).ready(function () {
         var lng = $(this).data('lng');
         var lat = $(this).data('lat');
 
-        gaia.initGoogleMaps(this, lat, lng);
+        esquire.initGoogleMaps(this, lat, lng);
     });
 
 });
 
 //activate collapse right menu when the windows is resized
 $(window).resize(function () {
-    if ($(window).width() < 992) {
-        gaia.initRightMenu();
-        //gaia.checkResponsiveImage();
+    if ($(window).width() < 1000) {
+
+        esquire.initRightMenu();
+        //esquire.checkResponsiveImage();
     }
-    if ($(window).width() > 992 && !burger_menu) {
+    if ($(window).width() > 1000 && !burger_menu) {
+
         $('nav[role="navigation"]').removeClass('navbar-burger');
-        gaia.misc.navbar_menu_visible = 1;
-        navbar_initialized = false;
+        esquire.misc.navbar_menu_visible = 0;
+        navbar_initialized = true;
     }
 });
 
 $(window).on('scroll', function () {
 
-    gaia.checkScrollForTransparentNavbar();
+    esquire.checkScrollForTransparentNavbar();
 
 
-    if (window_width > 992) {
-        gaia.checkScrollForParallax();
+    if (window_width > 1000) {
+        esquire.checkScrollForParallax();
     }
 
     if (content_opacity == 1) {
-        gaia.checkScrollForContentTransitions();
+        esquire.checkScrollForContentTransitions();
     }
 
 });
@@ -128,7 +130,7 @@ $('a[data-scroll="true"]').click(function (e) {
 
 });
 
-gaia = {
+esquire = {
     misc: {
         navbar_menu_visible: 0
     },
@@ -138,9 +140,9 @@ gaia = {
             $toggle = $('.navbar-toggle');
             $toggle.click(function () {
 
-                if (gaia.misc.navbar_menu_visible == 1) {
+                if (esquire.misc.navbar_menu_visible == 1) {
                     $('html').removeClass('nav-open');
-                    gaia.misc.navbar_menu_visible = 0;
+                    esquire.misc.navbar_menu_visible = 0;
                     $('#bodyClick').remove();
                     setTimeout(function () {
                         $toggle.removeClass('toggled');
@@ -149,13 +151,13 @@ gaia = {
                 } else {
                     setTimeout(function () {
                         $toggle.addClass('toggled');
-                        
+
                     }, 580);
 
                     div = '<div id="bodyClick"></div>';
                     $(div).appendTo("body").click(function () {
                         $('html').removeClass('nav-open');
-                        gaia.misc.navbar_menu_visible = 0;
+                        esquire.misc.navbar_menu_visible = 0;
                         $('#bodyClick').remove();
                         setTimeout(function () {
                             $toggle.removeClass('toggled');
@@ -163,7 +165,7 @@ gaia = {
                     });
 
                     $('html').addClass('nav-open');
-                    gaia.misc.navbar_menu_visible = 1;
+                    esquire.misc.navbar_menu_visible = 1;
 
                 }
             });
@@ -325,16 +327,16 @@ $(document).ready(function () {
     $('.image').fadeIn(2000);
 });
 
-$('.scroll').click(function(){
+$('.scroll').click(function () {
     event.preventDefault();
     removeHash();
     $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top - 95
+        scrollTop: $($.attr(this, 'href')).offset().top - 95
     }, 1000);
-   
+
 });
 
-function removeHash () { 
+function removeHash() {
     history.pushState("", document.title, window.location.pathname
-                                                       + window.location.search);
+        + window.location.search);
 }
