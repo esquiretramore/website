@@ -23,9 +23,12 @@ var scroll_distance = 500;
 
 $('body').append('<div style="" id="loadingDiv"><div class="loader hidden"></div></div>');
 
-
 $(document).ready(function () {
     BrowserDetect.init();
+    $('#cookieConsent').cookieConsent({
+        message: 'This website uses cookies. By using this website you consent to our use of these cookies.',
+        consentTime: 365
+      });
 
     if (BrowserDetect.browser == 'Chrome') {
         $(".loader").removeClass("hidden");

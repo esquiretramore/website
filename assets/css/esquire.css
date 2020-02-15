@@ -4259,6 +4259,31 @@ fieldset {
   margin-top: 10px;
 }
 
+#cookieConsent {
+  background-color: white;
+  padding: .9em;
+  text-align: center;
+  display: none;
+  position: fixed;
+  z-index: 100000;
+  bottom: 0px;
+  width: 100%;
+  font-size: 14px;
+  max-width: 100vw;
+}
+#cookieConsent button.cookieAccept {
+  background: #DC565C;
+  color: white;
+  border: none;
+  border-radius: 0.2em;
+  margin: 0.5em;
+  padding: 0.5em 0.5em 0.5em 0.6em;
+}
+
+#cookieConsent button.cookieAccept:focus {
+  outline: 0;
+}
+
 @media (max-width: 1000px) {
   .navbar-toggle {
     display: block !important;
