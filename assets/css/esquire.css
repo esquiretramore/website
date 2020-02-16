@@ -4200,30 +4200,6 @@ fieldset {
   font-size: 1.5em;
 }
 
-.loader,
-.loader:after {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-}
-.loader {
-  font-size: 10px;
-  position: fixed;
-  top: calc(50vh - 75px);
-  left: calc(50vw - 75px);
-  background: url(../img/loading.svg);
-}
-
-#loadingDiv {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background-color: #000;
-}
-
 .hidden {
   display: none;
 }
