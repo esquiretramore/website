@@ -9,6 +9,10 @@ $(document).ready(function () {
     var i = 2;
 
     var myInterval = setInterval(loadImage, 1);
+    
+    lightbox.option({
+      'alwaysShowNavOnTouchDevices': true
+    })
 
     function loadImage() {
 
