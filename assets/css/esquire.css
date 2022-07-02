@@ -3043,8 +3043,8 @@ fieldset[disabled] .form-control {
     line-height: 1.13636364;
   }
 
-  h4 {
-    line-height: 1.11111111;
+  h4, .h4 {
+    font-size: 1.5em
   }
 
   .navbar-transparent {
@@ -4370,9 +4370,6 @@ fieldset {
     margin-bottom: 20px;
   }
 
-  h4, .h4 {
-    font-size: 1.5em
-  }
 
 @media (max-width: 1100px) {
   .trip-ad {
