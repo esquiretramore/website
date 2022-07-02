@@ -4059,16 +4059,16 @@ body {
   background-image: url(../img/menus/wine-menu1.jpg);
   background-size: cover;
   height: 420px;
-  border: 1px solid #8c8c8c;
-  -webkit-filter: grayscale(80%);
-  filter: grayscale(80%);
+  border: 1px solid #8f8d8f;
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
 }
 
 .menu2 {
   background-image: url(../img/menus/food-menu1.jpg);
   background-size: cover;
   height: 420px;
-  border: 1px solid #8c8c8c;
+  border: 1px solid #8f8d8f;
   -webkit-filter: grayscale(50%);
   filter: grayscale(50%);
 }
@@ -4077,7 +4077,7 @@ body {
   background-image: url(../img/menus/special.jpg);
   background-size: cover;
   height: 420px;
-  border: 1px solid #8c8c8c;
+  border: 1px solid #8f8d8f;
   -webkit-filter: grayscale(50%);
   filter: grayscale(50%);
 }
